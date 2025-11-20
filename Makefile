@@ -1,6 +1,6 @@
-# makefile for university module
-# "make clean" deletes the exectuable to build again 
-# "make test" builds the main file and then runs the test script. This is what the autograder uses
+# Makefile for university module
+# "make clean" deletes the executable to build again
+# "make test" builds the main file and then runs the test script.
 
 main.out:
 	gcc main.c funcs.c -o main.out -lm
@@ -8,6 +8,5 @@ main.out:
 clean:
 	-rm main.out
 
-test:
-  clean main.out
+test: clean main.out
 	bash test.sh
